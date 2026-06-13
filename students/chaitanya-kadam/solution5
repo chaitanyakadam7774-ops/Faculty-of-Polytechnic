@@ -1,0 +1,16 @@
+#problem1
+def class_g(score):
+    if score <0 or score >100:
+        print"invalid score"
+    elif score >=90:
+        print"A"
+    elif score >=80 and 89:
+        print"B"
+    elif score >=70 and 79:
+        print"C"
+    elif score >=60 and 69:
+        print"D"
+    elif score >59:
+        print"F"
+score=int(input("enter score:"))
+class_g(score)
