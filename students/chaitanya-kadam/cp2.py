@@ -19,12 +19,25 @@ def ask_marks():
     if user_input.isdigit():
         marks = int(user_input)
         if 1 <= marks <= 100:
-            print(f"Success! You entered: {marks}")
+            return(f"Success! You entered: {marks}")
             return marks
         else:
-            print("Error: Number must be between 1 and 100.")
+            return("Error: Number must be between 1 and 100.")
     else:
-         print("Error: Enter whole numbers only.")
+         return("Error: Enter whole numbers only.")
     return ask_marks()
 ask_marks()
+
+def ask_y_n():
+    while True:
+        user_input=input("do you want to add another subject:-")
+        if user_input == "y":
+            return(True)
+            break
+        elif user_input == "n":
+            return(False)
+            break
+        else:
+            print("type only y/n only")
+ask_y_n()
   
