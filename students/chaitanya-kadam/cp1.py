@@ -1,4 +1,4 @@
-def avg(n1,n2,n3):
+def avg(a,b,c):
     a=n1+n2+n3/3
     return(a)
 
@@ -21,3 +21,7 @@ def classify_grade(a):
         return("D")
     else:
         return("F")
+
+def format(a,b,c):
+    return(f"{a},{b},{c}")
+    
