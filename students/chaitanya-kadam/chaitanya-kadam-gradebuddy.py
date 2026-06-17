@@ -4,8 +4,20 @@ def avg(n1,n2,n3):
 
 def result(a):
     if a>=75:
-        print("distiction")
+        return("distiction")
     elif a>=35:
-        print("pass")
+        return("pass")
     else:
-        print("fail")
+        return("fail")
+
+def classify_grade(a):
+    if a >= 90:
+        return("A")
+    elif a >= 80:
+        return("B")
+    elif a >= 70:
+        return("C")
+    elif a >= 60:
+        return("D")
+    else:
+        return("F")
