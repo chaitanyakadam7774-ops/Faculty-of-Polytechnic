@@ -1,36 +1,24 @@
 def ask_text():
     while True:
-        name = input("What is your name? ")
-        if name == "":
-            return("Can't be empty. Try again.")
-        else:
-            return(name)
-            break
-    while True:
-        sub_name = input("Enter subject name? ")
+        sub_name = input("Enter subject name?-")
         if sub_name == "":
-            return("Can't be empty. Try again.")
+            print("Can't be empty. Try again.")
         else:
             return(sub_name)
             break
-def ask_marks():
-    user_input = input("Enter marks (1-100): ")
     
-    if user_input.isdigit():
-        marks = int(user_input)
-        if 1 <= marks <= 100:
-            return(f"Success! You entered: {marks}")
-            return marks
-        else:
-            return("Error: Number must be between 1 and 100.")
-    else:
-         return("Error: Enter whole numbers only.")
-    return ask_marks()
-ask_marks()
+def ask_marks(): 
+    while True: 
+        user_input = input("Enter your marks 1-100: ") 
+        if user_input.isdigit(): 
+            return(user_input)
+            break
+        else: 
+            print("Enter whole number only")
 
-def ask_y_n():
+def ask_y_n(i):
     while True:
-        user_input=input("do you want to add another subject:-")
+        user_input=input(i)
         if user_input == "y":
             return(True)
             break
@@ -39,5 +27,10 @@ def ask_y_n():
             break
         else:
             print("type only y/n only")
-ask_y_n()
-  
+
+def collect():
+    TN=ask_text()
+    AM1=ask_marks()
+    AM2=ask_marks()
+    AM3=ask_marks()
+    return(TN,AM1,AM2,AM3)
